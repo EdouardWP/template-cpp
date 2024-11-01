@@ -27,9 +27,11 @@ namespace session19 {
         }
 
         char ch;
+        // Read each character from the file
         while (file.get(ch)) {
             result.push_back(std::isalpha(ch) ? std::tolower(ch) : ' ');
         }
+        // fclose isnt necessary (as discussed in class)
         return result; 
     }
 
